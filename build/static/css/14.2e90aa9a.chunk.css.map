@@ -1,0 +1,1 @@
+{"version":3,"sources":["PostWrapper.module.css"],"names":[],"mappings":"AAAA,0BACI,YAAa,CACb,kBAAmB,CACnB,sBAAuB,CACvB,SAAU,CACV,WACJ","file":"14.2e90aa9a.chunk.css","sourcesContent":[".Posts {\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    width: 90%;\r\n    margin: auto;\r\n}"]}
