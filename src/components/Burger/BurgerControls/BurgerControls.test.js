@@ -5,8 +5,14 @@ import {shallow} from 'enzyme';
 import BurgerControls from "./BurgerControls";
 import BurgerControl from "./BurgerControl/BurgerControl";
 
-const setup = (props={}) =>{
-	const component = shallow(<BurgerControls {...props}/>);
+
+const controls = [
+  {label:"Salad", type:"salad"},
+];
+
+
+const setup = (props) =>{
+	const component = shallow(<BurgerControls controls {...props}/>);
 	return component;
 }
 
@@ -20,7 +26,10 @@ describe ('BurgerBuilder components',()=>{
 
 	let component;
 	beforeEach(() => {
-		component = setup();
+		const props = {
+			price:7.6500000000,
+		};
+		component = setup(props);
 	});
 
 
@@ -33,7 +42,7 @@ describe ('BurgerBuilder components',()=>{
 	it('Should not render on the DOM',()=>{
 		console.log(component.debug);
 		const wrapper   = findByTestAttr(component,'BurgerControlComp');
-		expect(wrapper.length).toBe(0);
+		expect(wrapper.length).toBe(1);
     });
 
 

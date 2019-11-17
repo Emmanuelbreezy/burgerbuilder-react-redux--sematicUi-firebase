@@ -16,12 +16,13 @@ const controls = [
 ];
 
 const BurgerControls = (props) =>{
-                        //disabled={props.disabled[ctrl.type]}
+                       // disabled={props.disabled[ctrl.type]}
+                        //
     //
     return (
     <Container fluid  className="BurgerControlsRend">
         <div className={classes.BurgerControls}>
-            <div style={{margin:"2em"}}><Header as="h3" className="BurgerControlsHeader">Current Price: {props.price}</Header></div>
+            <div style={{margin:"2em"}}><Header as="h3" className="BurgerControlsHeader">Current Price: {props.price.toFixed(2)}</Header></div>
             {controls.map(ctrl =>(
                 <BurgerControl data-test="BurgerControlComp"  key={ctrl.label} label={ctrl.label} 
                         added={()=>props.ingredientAdded(ctrl.type)} 

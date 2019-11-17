@@ -153,7 +153,7 @@ export class BurgerBuilder extends Component {
                         </Grid.Row>
                         <Grid.Row>
                             <Grid.Column>
-                                <BurgerControls   
+                                <BurgerControls 
                                             ingredientAdded={this.props.onIngredientAdded}
                                             ingredientRemoved={this.props.onIngredientRemove}
                                             disabled={disabledInfo}
@@ -175,7 +175,7 @@ export class BurgerBuilder extends Component {
                         </Grid.Row>
                         <Grid.Row>
                             <Grid.Column>
-                                <BurgerControls   
+                                <BurgerControls  
                                             ingredientAdded={this.props.onIngredientAdded}
                                             ingredientRemoved={this.props.onIngredientRemove}
                                             disabled={disabledInfo}
@@ -205,7 +205,7 @@ export class BurgerBuilder extends Component {
        
 
         return (
-            <Aux>
+            <Aux data-test="BurgerControlsAUX">
 
             
             {this.state.purchasing ?
