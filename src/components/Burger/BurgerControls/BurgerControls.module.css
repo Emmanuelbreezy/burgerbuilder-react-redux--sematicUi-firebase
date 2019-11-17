@@ -1,0 +1,7 @@
+.BurgerControls{
+    width:100%;
+    background-color: #cf8f2c;
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+}
