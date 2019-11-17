@@ -10,6 +10,12 @@ const setup = (props={}) =>{
 	return component;
 }
 
+const findByTestAttr = (component,attr)=>{
+	console.log(attr);
+	const wrapper = component.find("[data-test='${attr}']");
+	return wrapper;
+}
+
 describe ('BurgerBuilder components',()=>{   
 
 	let component;
@@ -17,9 +23,22 @@ describe ('BurgerBuilder components',()=>{
 		component = setup();
 	});
 
-	it('Should render without errors',()=>{
-		console.log(component.debug);
-		const wrapper   = component.find('.BurgerControlsRend');
+
+	it('Should render on the DOM',()=>{
+		console.log(component);
+		const wrapper   =  component.find('.BurgerControlsRend');
 		expect(wrapper.length).toBe(1);
+    });
+
+	it('Should not render on the DOM',()=>{
+		console.log(component.debug);
+		const wrapper   = findByTestAttr(component,'BurgerControlComp');
+		expect(wrapper.length).toBe(0);
+    });
+
+
+	
+
 });
-});
+
+
